@@ -1,0 +1,32 @@
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Phone Bill</title>
+    
+    <script src="alphineData.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body x-data="pricePlanManager" x-init="init()">
+    <div>
+        <h1>Price Plan Management</h1>
+        
+        <h2>Create New Price Plan</h2>
+        <input type="text" x-model="newPricePlan.name" placeholder="Price Plan Name">
+        <input type="number" x-model="newPricePlan.call_cost" step="0.01" placeholder="Call Cost">
+        <input type="number" x-model="newPricePlan.sms_cost" step="0.01" placeholder="SMS Cost">
+        <button @click="createPricePlan()">Create Plan</button>
+
+        <h2>All Price Plans</h2>
+        <ul>
+            
+        </ul>
+    </div>
+</body>
+</html>
